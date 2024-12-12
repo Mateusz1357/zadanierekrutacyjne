@@ -51,3 +51,4 @@ This project comprises two microservices—**AccessVerifier** and **ClientDataMa
 Use `curl` or Postman to send requests to ClientDataManager and verify access through AccessVerifier.
 
 **Example curl command:**
+curl -X GET http://localhost:5000/your-endpoint -H "Your-Header: header-value"
