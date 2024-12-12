@@ -34,12 +34,10 @@ This project comprises two microservices—**AccessVerifier** and **ClientDataMa
 ### ClientDataManager
 
 1. **Install Dependencies:**
-   ```bash
-   pip install flask requests   ```
+   pip install flask requests   
 
 2. **Run the Service:**
-   ```bash
-   python ClientDataManager.py   ```
+   python ClientDataManager.py  
 
 3. **Functionality:**
 
