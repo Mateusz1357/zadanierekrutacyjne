@@ -1,49 +1,53 @@
-AccessVerifier and ClientDataManager
-This project comprises two microservices—AccessVerifier and ClientDataManager—designed to manage and verify client access based on IP addresses from the AWS eu-west-1 region.
+# AccessVerifier and ClientDataManager
 
-Overview
-AccessVerifier: Validates incoming requests against allowed IP ranges.
-ClientDataManager: Forwards requests to AccessVerifier and processes the responses.
-Prerequisites
-Python 3.7 or higher
-Docker (optional, for containerization)
-Kubernetes (optional, for deployment)
+This project comprises two microservices—**AccessVerifier** and **ClientDataManager**—designed to manage and verify client access based on IP addresses from the AWS eu-west-1 region.
 
-Setup
-AccessVerifier
+## Overview
 
-Install Dependencies:
-pip install flask requests apscheduler
+- **AccessVerifier**: Validates incoming requests against allowed IP ranges.
+- **ClientDataManager**: Forwards requests to AccessVerifier and processes the responses.
 
-Run the Service:
+## Prerequisites
 
-python AccessVerifier.py
+- Python 3.7 or higher
+- Docker (optional, for containerization)
+- Kubernetes (optional, for deployment)
 
-Functionality:
+## Setup
 
-Fetches AWS IP ranges for the eu-west-1 region.
-Verifies if incoming requests originate from allowed IPs.
-Refreshes IP ranges every 24 hours.
+### AccessVerifier
 
+1. **Install Dependencies:**
+   ```bash
+   pip install flask requests apscheduler   ```
 
-ClientDataManager
+2. **Run the Service:**
+   ```bash
+   python AccessVerifier.py   ```
 
-Install Dependencies:
+3. **Functionality:**
 
-pip install flask requests
+   - Fetches AWS IP ranges for the eu-west-1 region.
+   - Verifies if incoming requests originate from allowed IPs.
+   - Refreshes IP ranges every 24 hours.
 
-Run the Service:
+### ClientDataManager
 
+1. **Install Dependencies:**
+   ```bash
+   pip install flask requests   ```
 
-python ClientDataManager.py
+2. **Run the Service:**
+   ```bash
+   python ClientDataManager.py   ```
 
-Functionality:
+3. **Functionality:**
 
-Forwards HTTP headers to AccessVerifier.
-Processes requests based on AccessVerifier's responses.
-Testing
-Use curl or Postman to send requests to ClientDataManager and verify access through AccessVerifier.
+   - Forwards HTTP headers to AccessVerifier.
+   - Processes requests based on AccessVerifier's responses.
 
-Example curl command:
+## Testing
 
-curl -X GET http://localhost:5000/your-endpoint -H "Your-Header: header-value"
+Use `curl` or Postman to send requests to ClientDataManager and verify access through AccessVerifier.
+
+**Example curl command:**
