@@ -18,12 +18,12 @@ This project comprises two microservices—**AccessVerifier** and **ClientDataMa
 ### AccessVerifier
 
 1. **Install Dependencies:**
-   ```bash
-   pip install flask requests apscheduler   ```
+ 
+   pip install flask requests apscheduler  
 
 2. **Run the Service:**
-   ```bash
-   python AccessVerifier.py   ```
+ 
+   python AccessVerifier.py  
 
 3. **Functionality:**
 
@@ -34,9 +34,11 @@ This project comprises two microservices—**AccessVerifier** and **ClientDataMa
 ### ClientDataManager
 
 1. **Install Dependencies:**
+
    pip install flask requests   
 
 2. **Run the Service:**
+
    python ClientDataManager.py  
 
 3. **Functionality:**
